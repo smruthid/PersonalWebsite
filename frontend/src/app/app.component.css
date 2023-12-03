@@ -1,0 +1,30 @@
+span{
+    display: inline-block;
+}
+
+.typewriter{
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: 'Source Code Pro', monospace;  
+    animation: typing 2s steps(16, end);
+}
+
+.bounce {
+    animation: bounce 0.4s;
+    animation-delay: 2s;
+    animation-iteration-count: 6;
+    animation-direction: alternate;
+}
+.stack {
+    display: block;
+}
+
+@keyframes typing {
+    from { width: 0ch }
+    to { width: 16ch }
+}
+
+@keyframes bounce {
+    from { transform: translate3d(0px, 0, 0); }
+    to { transform: translate3d(0px, -10px, 0); }
+}
