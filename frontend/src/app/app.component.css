@@ -8,9 +8,24 @@
     left: 0;
 }
 
+.right {
+    right: 0;
+}
+
+.rectangle {
+    background-color: #DF9271;
+}
+
 .typewriter-container {
     display: flex;
     justify-content: center;
+}
+
+.typewriter{
+    top: 50%;
+    position: absolute;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .typewriter h1{ 
@@ -18,7 +33,8 @@
     margin: 0 auto;
     overflow: hidden;
     white-space: nowrap;
-    font-family: 'Source Code Pro', monospace;  
+    font-family: 'Bradley Hand', monospace;  
+    font-size: 4vw;
     animation: typing 2s steps(20, end);
 }
 
