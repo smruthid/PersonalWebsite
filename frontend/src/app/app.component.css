@@ -12,55 +12,16 @@
     right: 0;
 }
 
-.rectangle {
-    background-color: #DF9271;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 90%;
-    width: 90%;
-}
-
-.typewriter-container {
+.container {
     display: flex;
     justify-content: center;
 }
 
-.typewriter{
-    top: 50%;
-    position: absolute;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
 
-.typewriter h1{ 
-    color: #DF9271;
-    margin: 0 auto;
-    overflow: hidden;
-    white-space: nowrap;
-    font-family: 'Bradley Hand', monospace;  
-    font-size: 4vw;
-    animation: typing 2s steps(20, end);
-}
 
-ul {
-    list-style-type: none;
-}
 
-li {
-    font-family: 'Bradley Hand', monospace;
-    font-size: 2vw;
-}
 
-a{
-    text-decoration: none;
-    color: #E1C1B3;
-}
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
+
+
 
