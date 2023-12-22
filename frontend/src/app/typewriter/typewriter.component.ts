@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./typewriter.component.css']
 })
 export class TypewriterComponent {
-
+  name = "SMRUTHI";
 }
