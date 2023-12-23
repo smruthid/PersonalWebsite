@@ -1,20 +1,18 @@
 <form [formGroup]="contactForm">
-    <mat-form-field>
-        <mat-label for="contactName">Name</mat-label>
-        <input matInput id="contactName" formControlName="contactName">
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label for="contactEmail">Email</mat-label>
-        <input matInput id="contactEmail" formControlName="contactEmail">
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label for="contactSubject">Subject</mat-label>
-        <input matInput id="contactSubject" formControlName="contactSubject">   
-    </mat-form-field>
-    <mat-form-field>
-        <mat-label for="contactMessage">Message</mat-label>
-        <textarea matInput id="contactMessage" formControlName="contactMessage"></textarea>
-    </mat-form-field>
+    <div>
+        <label for="contactName">Name: </label>
+        <input id="contactName" type="text" formControlName="contactName">
+    </div>
+    <div>
+        <label for="contactEmail">Email: </label>
+        <input id="contactEmail" type="text" formControlName="contactEmail">
+    </div>
+    <div>
+        <label for="contactSubject">Subject: </label>
+        <input id="contactSubject" type="text" formControlName="contactSubject">
+    </div>
+    <div>
+        <label for="contactMessage">Message: </label>
+        <input for="contactMessage" type="text" formControlName="contactMessage">
+    </div>
 </form>
-
-<button mat-raised-button (click)="onSubmit()">Submit</button>
