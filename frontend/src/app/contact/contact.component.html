@@ -1,18 +1,25 @@
-<form [formGroup]="contactForm">
+<div class="boundary">
+    <p>Contact Me</p>
+    <form [formGroup]="contactForm">
+        <div>
+            <p><label for="contactName">Name </label></p>
+            <input id="contactName" type="text" formControlName="contactName">
+        </div>
+        <div>
+            <p><label for="contactEmail">Email </label></p>
+            <input id="contactEmail" type="text" formControlName="contactEmail">
+        </div>
+        <div>
+           <p><label for="contactSubject">Subject </label></p>
+            <input id="contactSubject" type="text" formControlName="contactSubject">
+        </div>
+        <div>
+            <p><label for="contactMessage">Message </label></p>
+            <textarea for="contactMessage" type="text" formControlName="contactMessage" rows="6" cols="70"></textarea>
+        </div>
+    </form>
     <div>
-        <label for="contactName">Name: </label>
-        <input id="contactName" type="text" formControlName="contactName">
+        <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
     </div>
-    <div>
-        <label for="contactEmail">Email: </label>
-        <input id="contactEmail" type="text" formControlName="contactEmail">
-    </div>
-    <div>
-        <label for="contactSubject">Subject: </label>
-        <input id="contactSubject" type="text" formControlName="contactSubject">
-    </div>
-    <div>
-        <label for="contactMessage">Message: </label>
-        <input for="contactMessage" type="text" formControlName="contactMessage">
-    </div>
-</form>
+</div>
+
