@@ -10,11 +10,26 @@ textarea[type=text]{
     border-radius: 4px;
 }
 
-p {
-    font-family: 'Bradley Hand', monospace;
-    color: #DF9271;
+.boundary {
+    margin: 3%;
 }
 
-.boundary {
-    margin: 2%;
+.text-label {
+    font-family: 'Bradley Hand', monospace;
+    color: #DF9271;
+    font-size: 20px;
 }
+
+.title {
+    font-family: 'Bradley Hand', monospace;
+    color: #DF9271;
+    font-size: 50px;
+    padding-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-item {
+    padding-bottom: 2%;
+}
+
