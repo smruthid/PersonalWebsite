@@ -13,6 +13,7 @@
     font-family: 'Bradley Hand', monospace;  
     font-size: 4vw;
     animation: typing 2s steps(20, end);
+    padding: 1%;
 }
 
 

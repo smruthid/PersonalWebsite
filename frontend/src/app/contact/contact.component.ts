@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -8,15 +8,41 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 
 export class ContactComponent {
+  buttonClick = false;
   contactForm = new FormGroup({
-    contactName: new FormControl(''),
-    contactEmail: new FormControl(''),
-    contactSubject: new FormControl(''),
-    contactMessage: new FormControl('')
+    contactName: new FormControl('',
+      [Validators.required]
+    ),
+    contactEmail: new FormControl('', 
+      [Validators.required, Validators.email]
+    ),
+    contactSubject: new FormControl('',
+      [Validators.required]
+    ),
+    contactMessage: new FormControl('',
+      [Validators.required]
+    )
   });
+
+  get contactName() {
+    return this.contactForm.get('contactName')
+  }
+
+  get contactEmail() {
+    return this.contactForm.get('contactEmail')
+  }
+
+  get contactSubject() {
+    return this.contactForm.get('contactSubject')
+  }
+
+  get contactMessage() {
+    return this.contactForm.get('contactMessage')
+  }
 
   onSubmit() {
     //this.user_name.setValue('Nancy');
+    this.buttonClick = true;
     console.log(this.contactForm.value)
   }
 }
