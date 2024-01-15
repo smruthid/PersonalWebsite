@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { BooksComponent } from './books/books.component';
 
 
 
@@ -28,7 +29,8 @@ import { MatIconModule } from '@angular/material/icon';
     AboutmeComponent,
     TravelComponent,
     ExperienceComponent,
-    ContactComponent
+    ContactComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,

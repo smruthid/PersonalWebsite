@@ -5,6 +5,7 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
 import { TravelComponent } from './travel/travel.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
+import { BooksComponent } from './books/books.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'books',
+    component: BooksComponent
   }
 ];
 

@@ -43,6 +43,10 @@ export class ContactComponent {
   onSubmit() {
     //this.user_name.setValue('Nancy');
     this.buttonClick = true;
-    console.log(this.contactForm.value)
+    if(this.contactForm.valid) {
+      console.log(this.contactForm.value);
+    } else {
+      console.log("Error");
+    }
   }
 }
