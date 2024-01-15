@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ContactinfoService } from './contactinfo.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,6 +9,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 
 export class ContactComponent {
+  dataFromService: any;
+  constructor(private contactInfo: ContactinfoService) {}
+
   buttonClick = false;
   contactForm = new FormGroup({
     contactName: new FormControl('',
@@ -44,7 +48,14 @@ export class ContactComponent {
     //this.user_name.setValue('Nancy');
     this.buttonClick = true;
     if(this.contactForm.valid) {
-      console.log(this.contactForm.value);
+      let userContactInfo = {
+        name: this.contactForm.get('contactName')?.value,
+        email: this.contactForm.get('contactEmail')?.value,
+        subject: this.contactForm.get('contactSubject')?.value,
+        message: this.contactForm.get('contactMessage')?.value
+      }
+      console.log(userContactInfo);
+      this.contactInfo.sendData(userContactInfo).subscribe();
     } else {
       console.log("Error");
     }
