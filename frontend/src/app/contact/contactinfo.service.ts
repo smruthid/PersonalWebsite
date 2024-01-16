@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class ContactinfoService {
-  url = "http://localhost:3000/contactinfo"
+  url = "http://localhost:3000/api/contact"
 
   constructor(private http: HttpClient) { }
 

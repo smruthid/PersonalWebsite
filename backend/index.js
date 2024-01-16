@@ -1,12 +1,15 @@
 const nodemailer = require("nodemailer");
 const express = require('express');
-const dotenv = require('dotenv').config()
+const dotenv = require('dotenv').config();
+const cors = require('cors');
 const app = express();
 
 
 const user_email = process.env.WEBSITE_EMAIL;
 const user_pass = process.env.WEBSITE_PASSWORD;
+
 app.use(express.json())
+app.use(cors())
 
 const contactInfoArray = [{
     "id": 1,
@@ -31,11 +34,6 @@ app.post('/api/contact', (req, res) => {
     contactInfoArray.push(contactInfo);
     res.send(contactInfo);
 })
-
-
-
-
-
 
 app.listen(3000, () => [
     console.log("Listening on port 3000")
