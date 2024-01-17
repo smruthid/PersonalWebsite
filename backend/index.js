@@ -4,26 +4,31 @@ const dotenv = require('dotenv').config();
 const cors = require('cors');
 const app = express();
 
+app.use(express.json())
+app.use(cors())
 
 const user_email = process.env.WEBSITE_EMAIL;
 const user_pass = process.env.WEBSITE_PASSWORD;
 
-app.use(express.json())
-app.use(cors())
+const transporter_info = {
+    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: {
+        user: user_email,
+        pass: user_pass
+    }
+}
 
-const contactInfoArray = [{
-    "id": 1,
-    "name": "Smruthi",
-    "email": "smruthi07@gmail.com",
-    "subject": "Test",
-    "message": "Test"
-}];
+const contactInfoArray = [];
 
 app.get('/api/contact', (req, res) => {
     res.send(contactInfoArray)
 })
 
 app.post('/api/contact', (req, res) => {
+    const transporter = nodemailer.createTransport(transporter_info)
     const contactInfo = {
         id: contactInfoArray.length + 1,
         name: req.body.name,
@@ -31,6 +36,25 @@ app.post('/api/contact', (req, res) => {
         subject: req.body.subject,
         message: req.body.message
     }
+
+    const mailOptions = {
+        from: {
+            name: contactInfo.name,
+            address: contactInfo.email
+        },
+        to: ["danda.smruthi@gmail.com", "smruthi07@gmail.com"],
+        subject: contactInfo.subject,
+        text: contactInfo.message,
+        html: "<b>Hello world?</b>"
+    }
+
+    transporter.sendMail(mailOptions)
+    .then(() => {
+        console.log("Successfully sent data!")
+    })
+    .catch(() => {
+        console.log("Unsuccessful :(")
+    })
     contactInfoArray.push(contactInfo);
     res.send(contactInfo);
 })
