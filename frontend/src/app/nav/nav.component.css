@@ -5,6 +5,7 @@ ul {
 li {
     font-family: 'Bradley Hand', monospace;
     font-size: 2vw;
+    padding: 1%;
 }
 
 a{

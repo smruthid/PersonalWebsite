@@ -1,1 +1,6 @@
-<p>books works!</p>
+<p>January 2024</p>
+<ul>
+    <li *ngFor="let book of JanuaryBooks">
+        <img [src]="book.imageUrl" [alt]="book.name" />
+    </li>
+</ul>
