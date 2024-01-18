@@ -1,6 +1,11 @@
 <p>January 2024</p>
-<ul>
-    <li *ngFor="let book of JanuaryBooks">
-        <img [src]="book.imageUrl" [alt]="book.name" />
-    </li>
-</ul>
+<mat-card class="card-class" *ngFor="let book of JanuaryBooks">
+    <mat-card-header>
+        <mat-card-title class="mat-card-text">{{book.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="book.imageUrl" [alt]="book.name">
+    <mat-card-content>
+        <p class="mat-card-text"> Author: {{book.author}}</p>
+        <p class="mat-card-text"> Rating: {{book.rating}}</p>
+    </mat-card-content>
+</mat-card>

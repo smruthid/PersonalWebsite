@@ -1,0 +1,10 @@
+.card-class {
+    width: 15%;
+    float: left;
+    margin: 1%;
+    background-color: #DF9271;
+}
+
+.mat-card-text {
+    color: #e6cfc6;
+}

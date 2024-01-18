@@ -11,11 +11,15 @@ export class BooksComponent {
     {
       id: '1',
       name: "Eleanor Oliphant is completely fine",
+      author: "Gail Honeyman",
+      rating: "",
       imageUrl: "assets/EleanorOliphant.png"
     },
     {
       id: "2",
       name: "Sister of my Heart",
+      author: "Chitra Banerjee Divakaruni",
+      rating: "",
       imageUrl: "assets/SisterOfMyHeart.png"
     }
   ]

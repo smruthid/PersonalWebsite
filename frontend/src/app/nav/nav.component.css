@@ -1,15 +1,7 @@
-ul {
-    list-style-type: none;
-}
-
-li {
-    font-family: 'Bradley Hand', monospace;
-    font-size: 2vw;
-    padding: 1%;
-}
-
 a{
+    font-size: 2vw;
     text-decoration: none;
+    font-family: 'Bradley Hand', monospace;
     color: #E1C1B3;
 }
 

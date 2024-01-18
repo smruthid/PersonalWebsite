@@ -16,6 +16,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+
 import { BooksComponent } from './books/books.component';
 
 
@@ -41,6 +44,8 @@ import { BooksComponent } from './books/books.component';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
+    MatDividerModule,
+    MatListModule,
     HttpClientModule
   ],
   providers: [],
