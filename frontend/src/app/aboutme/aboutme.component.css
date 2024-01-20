@@ -1,0 +1,38 @@
+img {
+    border-radius: 50%;
+    filter: grayscale(100%);
+    width: 50%;
+}
+
+h1 {
+    font-family: 'Bradley Hand', monospace;
+    color: #DF9271;
+}
+
+@keyframes slide {
+    from {padding-top: 40%;}
+    to {padding-top: 20%;}
+}
+
+.slide-in {
+    padding-top: 40%;
+    animation: forwards;
+    animation-name: slide;
+    animation-duration: 1s;
+}
+
+.half{
+    height: 100%;
+    width: 50%; 
+    position: fixed;  
+}
+
+.left{
+    left: 20%;
+}
+
+.right {
+    right: 0;
+}
+
+
