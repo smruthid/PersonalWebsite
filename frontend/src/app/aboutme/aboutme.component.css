@@ -4,20 +4,65 @@ img {
     width: 50%;
 }
 
-h1 {
+p {
     font-family: 'Bradley Hand', monospace;
     color: #DF9271;
 }
 
+.title {    
+    font-size: 60px;
+}
+
+.description {
+    font-size: 20px;
+}
+
 @keyframes slide {
-    from {padding-top: 40%;}
-    to {padding-top: 20%;}
+    from {
+        padding-top: 40%;
+        opacity: 0;
+    }
+    to {
+        padding-top: 20%;
+        opacity: 1;
+    }
+}
+
+@keyframes slide3 {
+    from {
+        padding-top: 25%;
+        opacity: 0;
+    }
+    to {
+        padding-top: 5%;
+        opacity: 1;
+    }
 }
 
 .slide-in {
     padding-top: 40%;
     animation: forwards;
     animation-name: slide;
+    animation-duration: 1s;
+}
+
+.slide-in2 {
+    margin-right: 10%;
+    padding-top: 40%;
+    opacity: 0;
+    animation: forwards;
+    animation-name: slide;
+    animation-delay: 1s;
+    animation-duration: 1s;
+
+}
+
+.slide-in3 {
+    margin-right: 10%;
+    opacity: 0;
+    animation: forwards;
+    animation-name: slide3;
+    animation-delay: 2s;
     animation-duration: 1s;
 }
 
