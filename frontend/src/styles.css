@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~animate.css/animate.min';
+@import '~@glidejs/glide/dist/css/glide.core.min.css';
+
 
 .background {
     background-color: #E1C1B3;

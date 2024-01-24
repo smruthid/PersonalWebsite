@@ -20,6 +20,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 
 import { BooksComponent } from './books/books.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 
@@ -33,7 +34,8 @@ import { BooksComponent } from './books/books.component';
     TravelComponent,
     ExperienceComponent,
     ContactComponent,
-    BooksComponent
+    BooksComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

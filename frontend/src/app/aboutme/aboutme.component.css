@@ -23,7 +23,18 @@ p {
         opacity: 0;
     }
     to {
-        padding-top: 20%;
+        padding-top: 30%;
+        opacity: 1;
+    }
+}
+
+@keyframes slide2 {
+    from {
+        padding-top: 40%;
+        opacity: 0;
+    }
+    to {
+        padding-top: 35%;
         opacity: 1;
     }
 }
@@ -51,7 +62,7 @@ p {
     padding-top: 40%;
     opacity: 0;
     animation: forwards;
-    animation-name: slide;
+    animation-name: slide2;
     animation-delay: 1s;
     animation-duration: 1s;
 
@@ -73,7 +84,7 @@ p {
 }
 
 .left{
-    left: 20%;
+    left: 15%;
 }
 
 .right {
