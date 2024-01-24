@@ -18,11 +18,11 @@
             <textarea for="contactMessage" type="text" formControlName="contactMessage" rows="6" cols="70"></textarea>
         </div>
         <button mat-raised-button class="text-label" (click)="onSubmit()">Submit</button>
-        <span *ngIf="buttonClick">
-            <p *ngIf="contactName && contactName.invalid">Please enter a name</p>
-            <p *ngIf="contactEmail && contactEmail.invalid">Please enter a valid email</p>
-            <p *ngIf="contactSubject && contactSubject.invalid">Please enter a subject</p>
-            <p *ngIf="contactMessage && contactMessage.invalid">Please enter a message</p>
+        <span *ngIf="buttonClick && formSubmission">
+            <p>Contact Submission Successful!</p>
+        </span>
+        <span *ngIf="buttonClick && !formSubmission">
+            <p>Contact Submission Unsuccessful!</p>
         </span>
     </form>
 </div>

@@ -13,6 +13,7 @@ export class ContactComponent {
   constructor(private contactInfo: ContactinfoService) {}
 
   buttonClick = false;
+  formSubmission = false;
   contactForm = new FormGroup({
     contactName: new FormControl('',
       [Validators.required]
@@ -55,7 +56,12 @@ export class ContactComponent {
         message: this.contactForm.get('contactMessage')?.value
       }
       console.log(userContactInfo);
-      this.contactInfo.sendData(userContactInfo).subscribe();
+      this.contactInfo.sendData(userContactInfo).subscribe(
+        result => {
+          this.contactForm.reset();
+          this.formSubmission = true;
+        }
+      );
     } else {
       console.log("Error");
     }

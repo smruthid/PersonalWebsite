@@ -37,6 +37,7 @@ app.post('/api/contact', (req, res) => {
         message: req.body.message
     }
 
+    const htmlData = `<ul><li>Sender: ${contactInfo.email}</li><li>Message: ${contactInfo.message}</li></ul>`
     const mailOptions = {
         from: {
             name: contactInfo.name,
@@ -44,8 +45,7 @@ app.post('/api/contact', (req, res) => {
         },
         to: ["danda.smruthi@gmail.com", "smruthi07@gmail.com"],
         subject: contactInfo.subject,
-        text: contactInfo.message,
-        html: "<b>Hello world?</b>"
+        html: htmlData
     }
 
     transporter.sendMail(mailOptions)
