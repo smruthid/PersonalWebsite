@@ -60,6 +60,6 @@ app.post('/api/contact', (req, res) => {
     res.send(contactInfo);
 })
 
-app.listen(3000, () => [
+app.listen(port, () => [
     console.log("Listening on port 3000")
 ])
