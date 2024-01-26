@@ -6,13 +6,27 @@ li a {
     text-decoration: none;
 }
 
-h2 {
-    font-size: 4rem;
+.left{
+    left: 0;
 }
 
-h3{
-    font-size: 2rem;
+.right {
+    right: 0;
 }
+
+.quarter{
+    height: 100%;
+    width: 40%; 
+    position: fixed;  
+}
+
+.three-quarters {
+    height: 100%;
+    width: 60%; 
+    position: fixed; 
+    overflow-y:scroll; 
+}
+
 .topic {
-    padding: 1%;
+    height: 100vh;
 }
