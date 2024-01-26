@@ -1,10 +1,12 @@
 const nodemailer = require("nodemailer");
 const express = require('express');
 const dotenv = require('dotenv').config();
+const http  = require('http');
+const Server  = require("socket.io").Server;
 const cors = require('cors');
 const app = express();
 const path = require('path')
-const port = process.env.PORT || 8080;
+const port = 3000;//process.env.PORT || 8080;
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname  , "../frontend/dist/frontend");
 
@@ -13,8 +15,8 @@ app.use(cors())
 app.use(express.static(buildPath))
 
 
-const user_email = process.env.WEBSITE_EMAIL;
-const user_pass = process.env.WEBSITE_PASSWORD;
+const user_email = process.env.WEBSITE_EMAIL || "test";
+const user_pass = process.env.WEBSITE_PASSWORD || "test";
 
 const transporter_info = {
     service: "gmail",
@@ -28,6 +30,13 @@ const transporter_info = {
 }
 
 const contactInfoArray = [];
+
+const server  = http.createServer(app)
+const io = new Server(server , {
+    cors:{
+        origin:"*"
+    }
+})
 
 app.get("/*", function(req, res){
 
@@ -78,6 +87,18 @@ app.post('/api/contact', (req, res) => {
     res.send(contactInfo);
 })
 
-app.listen(port, () => [
-    console.log("Listening on port 3000")
-])
+io.on("connection" , (socket) => {
+    console.log('We are connected')
+ 
+    socket.on("chat" , chat => {
+       io.emit('chat' , chat)
+    } )
+ 
+    socket.on('disconnect' , ()=> {
+     console.log('disconnected')
+    })
+ })
+ 
+ 
+ 
+ server.listen(port , () => {})
