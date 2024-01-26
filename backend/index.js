@@ -3,10 +3,15 @@ const express = require('express');
 const dotenv = require('dotenv').config();
 const cors = require('cors');
 const app = express();
+const path = require('path')
 const port = process.env.PORT || 8080;
+const _dirname = path.dirname("")
+const buildPath = path.join(_dirname  , "../frontend/dist/frontend");
 
 app.use(express.json())
 app.use(cors())
+app.use(express.static(buildPath))
+
 
 const user_email = process.env.WEBSITE_EMAIL;
 const user_pass = process.env.WEBSITE_PASSWORD;
@@ -23,6 +28,19 @@ const transporter_info = {
 }
 
 const contactInfoArray = [];
+
+app.get("/*", function(req, res){
+
+    res.sendFile(
+        path.join(__dirname, "../frontend/dist/frontend/index.html"),
+        function (err) {
+          if (err) {
+            res.status(500).send(err);
+          }
+        }
+      );
+
+})
 
 app.get('/api/contact', (req, res) => {
     res.send(contactInfoArray)
