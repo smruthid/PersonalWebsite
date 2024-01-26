@@ -1,0 +1,18 @@
+ul {
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+.topic {
+    padding: 1%;
+}
