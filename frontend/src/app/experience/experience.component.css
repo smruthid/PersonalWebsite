@@ -24,9 +24,14 @@ li a {
     height: 100%;
     width: 60%; 
     position: fixed; 
+}
+
+.container {
     overflow-y:scroll; 
+    scroll-snap-type: y mandatory;
 }
 
 .topic {
     height: 100vh;
+    scroll-snap-align: start;
 }

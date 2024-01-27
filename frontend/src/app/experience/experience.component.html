@@ -1,32 +1,34 @@
 <div class="left quarter">
-    <ul>
-        <li><a href="/">Education</a></li>
-        <li><a href="/">Technology</a></li>
-        <li><a href="/">Work Experience</a></li>
-        <li><a href="/">Projects</a></li>
-    </ul>
+    <nav>
+        <ul>
+            <li><a (click)="scrollToElement('tech')">Technology</a></li>
+            <li><a (click)="scrollToElement('work')">Work Experience</a></li>
+            <li><a (click)="scrollToElement('edu')">Education</a></li>
+            <li><a (click)="scrollToElement('projects')">Projects</a></li>
+        </ul>
+    </nav>
 </div>
 
-<div class="right three-quarters">
-    <div class="topic">
+<div class="right three-quarters container">
+    <div class="topic" id="tech">
         <h2 class="title">Technology</h2>
         <h3 class="tech">C++</h3>
         <h3 class="tech">Python</h3>
         <h3 class="tech">Angular (HTML, CSS, Typescript)</h3>
         <h3 class="tech">GIT</h3>
     </div>
-    <div class="topic">
+    <div class="topic" id="work">
         <h2>Work Experience</h2>
         <h3 class="company">Meta</h3>
         <h3 class="company">Microchip</h3>
         <h3 class="company">TriNet</h3>
     </div>
-    <div class="topic">
+    <div class="topic" id="edu">
         <h2 class="title">Education and Certifications</h2>
         <h3 class="edu">San Jose State University</h3>
         <h3 class="edu">UC Berkeley</h3>
     </div>
-    <div class="topic">
+    <div class="topic" id="projects">
         <h2 class="title">Projects</h2>
     </div>
 </div>
