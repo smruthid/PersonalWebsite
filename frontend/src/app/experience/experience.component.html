@@ -4,7 +4,6 @@
             <li><a (click)="scrollToElement('tech')">Technology</a></li>
             <li><a (click)="scrollToElement('work')">Work Experience</a></li>
             <li><a (click)="scrollToElement('edu')">Education</a></li>
-            <li><a (click)="scrollToElement('projects')">Projects</a></li>
         </ul>
     </nav>
 </div>
@@ -19,16 +18,44 @@
     </div>
     <div class="topic" id="work">
         <h2>Work Experience</h2>
-        <h3 class="company">Meta</h3>
-        <h3 class="company">Microchip</h3>
-        <h3 class="company">TriNet</h3>
+        <mat-card class="timeline-content">
+            <mat-card-content>
+                <h4 class="date">September 2022 - Present</h4>
+                <h3 class="company">Meta</h3>
+                <h4 class="position"> Firmware/Software Engineer (contract)</h4>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="timeline-content">
+            <mat-card-content>
+                <h4 class="date">April 2021 - September 2022</h4>
+                <h3 class="company">Microchip</h3>
+                <h4 class="position">Software Engineer 1</h4>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="timeline-content">
+            <mat-card-content>
+                <h4 class="date">June 2020 - December 2020</h4>
+                <h3 class="company">TriNet</h3>
+                <h4 class="position">Software Development Intern</h4>
+            </mat-card-content>
+        </mat-card>
+        
     </div>
     <div class="topic" id="edu">
         <h2 class="title">Education and Certifications</h2>
-        <h3 class="edu">San Jose State University</h3>
-        <h3 class="edu">UC Berkeley</h3>
-    </div>
-    <div class="topic" id="projects">
-        <h2 class="title">Projects</h2>
+        <mat-card>
+            <mat-card-content>
+                <h3 class="education">San Jose State University</h3>
+                <h4 class="edu-topic">BSc in Computer Engineering (CMPE)</h4>
+                <h4 class="edu-date">August 2017 - December 2020</h4>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-content>
+                <h3 class="education">UC Berkeley</h3>
+                <h4 class="edu-topic">FinTech Bootcamp</h4>
+                <h4 class="edu-date">June 2022 - December 2022</h4>
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>

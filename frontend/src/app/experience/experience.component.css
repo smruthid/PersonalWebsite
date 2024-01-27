@@ -16,13 +16,13 @@ li a {
 
 .quarter{
     height: 100%;
-    width: 40%; 
+    width: 35%; 
     position: fixed;  
 }
 
 .three-quarters {
     height: 100%;
-    width: 60%; 
+    width: 65%; 
     position: fixed; 
 }
 
@@ -34,4 +34,46 @@ li a {
 .topic {
     height: 100vh;
     scroll-snap-align: start;
+}
+
+h2 {
+    font-size: 8vh;
+    padding-top: 5%;
+    line-height: 8.5vh;
+    font-family: 'Bradley Hand', monospace;
+    color: #bc7b5f;
+}
+
+h3.company{
+    line-height: 2vh;
+    color: #bc7b5f;;
+    font-size: 4vh;
+    font-family: 'Bradley Hand', monospace;
+}
+
+h3.education {
+    font-size: 3vh;
+    color: #bc7b5f;
+    font-family: 'Bradley Hand', monospace;
+}
+
+h4.position {
+    font-size: 2.5vh;
+    line-height: 3vh;
+}
+
+h4.edu-topic {
+    font-size: 2.5vh;
+    line-height: 1vh;
+}
+
+h4 {
+    color: #E1C1B3;
+    font-family: 'Bradley Hand', monospace;
+}
+
+mat-card {
+    background-color: white;
+    margin: 2%;
+    width: 70%;
 }
