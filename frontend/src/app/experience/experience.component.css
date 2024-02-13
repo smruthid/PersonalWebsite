@@ -1,10 +1,16 @@
 ul {
     list-style-type: none;
+    margin-top: 30%;
+    margin-left: 20%;
 }
 
 li a {
+    font-size: 4vh;
+    line-height: 6vh;
     text-decoration: none;
     cursor: pointer;
+    color: #bc7b5f;
+    font-family: 'Bradley Hand', monospace;
 }
 
 .left{
