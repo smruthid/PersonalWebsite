@@ -2,16 +2,13 @@ const nodemailer = require("nodemailer");
 const express = require('express');
 const dotenv = require('dotenv').config();
 const http  = require('http');
-const Server  = require("socket.io").Server;
-const cors = require('cors');
 const app = express();
 const path = require('path')
-const port = 3000;//process.env.PORT || 8080;
+const port = process.env.PORT;
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname  , "./frontend");
 
 app.use(express.json())
-app.use(cors())
 app.use(express.static(buildPath))
 
 
