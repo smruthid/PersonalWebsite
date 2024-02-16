@@ -2,15 +2,19 @@ const nodemailer = require("nodemailer");
 const express = require('express');
 const dotenv = require('dotenv').config();
 const http  = require('http');
+const helmet = require('helmet');
+const compression = require('compression');
 const app = express();
-const path = require('path')
+const path = require('path');
+
 const port = process.env.PORT;
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname  , "./frontend");
 
 app.use(express.json())
 app.use(express.static(buildPath))
-
+app.use(helmet())
+app.use(compression())
 
 const user_email = process.env.WEBSITE_EMAIL || "test";
 const user_pass = process.env.WEBSITE_PASSWORD || "test";
