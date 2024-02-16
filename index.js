@@ -33,7 +33,7 @@ const server  = http.createServer(app)
 app.get("/*", function(req, res){
 
     res.sendFile(
-        path.join(__dirname, "../frontend/dist/frontend/index.html"),
+        path.join(__dirname, "frontend/index.html"),
         function (err) {
           if (err) {
             res.status(500).send(err);
