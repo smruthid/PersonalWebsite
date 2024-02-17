@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class ContactinfoService {
-  url = "http://localhost:3000/api/contact"
+  url = "https://calm-crag-34365-bfa2266ba68d.herokuapp.com/api/contact"
 
   constructor(private http: HttpClient) { }
 
