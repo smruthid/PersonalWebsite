@@ -10,11 +10,29 @@ p {
 }
 
 .title {    
-    font-size: 60px;
+    font-size: 6vh;
 }
 
 .description {
     font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .title{
+        font-size: 4vh;
+
+    }
+
+    .description {
+        font-size: 2vh;
+    }
+
+    img {
+        border-radius: 50%;
+        filter: grayscale(100%);
+        width: 50%;
+        margin-top: 10%;
+    }
 }
 
 @keyframes slide {

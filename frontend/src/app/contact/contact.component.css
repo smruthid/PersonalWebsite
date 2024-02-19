@@ -1,5 +1,5 @@
 input[type=text] {
-    width: 15%;
+    width: 300px;
     padding: 12px 20px;
     border: 0px;
     border-radius:4px;
@@ -12,6 +12,28 @@ input[type=text]:focus {
 textarea[type=text] {
     border: 0px;
     border-radius: 4px;
+}
+
+p {
+    font-family: 'Bradley Hand', monospace;
+    color: #DF9271;
+    font-size: 6vh;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    input[type=text] {
+        width: 200px;
+    }
+    
+    textarea[type=text] {
+        width: 300px;
+    }
+
+    p {
+        font-size: 4vh;
+    }
 }
 
 textarea[type=text]:focus {
@@ -28,13 +50,7 @@ textarea[type=text]:focus {
     font-size: 20px;
 }
 
-.title {
-    font-family: 'Bradley Hand', monospace;
-    color: #DF9271;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-}
+
 
 .form-item {
     padding-bottom: 2%;
