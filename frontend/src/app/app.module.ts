@@ -9,7 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
-import { TravelComponent } from './travel/travel.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -17,11 +16,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
-import {MatListModule} from '@angular/material/list';
-
-import { BooksComponent } from './books/books.component';
-import { CarouselComponent } from './carousel/carousel.component';
-
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -31,11 +27,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     NavComponent,
     HomeComponent,
     AboutmeComponent,
-    TravelComponent,
     ExperienceComponent,
     ContactComponent,
-    BooksComponent,
-    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +41,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     MatIconModule,
     MatDividerModule,
     MatListModule,
+    MatGridListModule,
     HttpClientModule
   ],
   providers: [],
