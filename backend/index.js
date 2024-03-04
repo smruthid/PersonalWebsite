@@ -6,7 +6,7 @@ const Server  = require("socket.io").Server;
 const cors = require('cors');
 const app = express();
 const path = require('path')
-const port = 3000;//process.env.PORT || 8080;
+const port = process.env.PORT;
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname  , "./frontend");
 
@@ -15,8 +15,8 @@ app.use(cors())
 app.use(express.static(buildPath))
 
 
-const user_email = process.env.WEBSITE_EMAIL || "test";
-const user_pass = process.env.WEBSITE_PASSWORD || "test";
+const user_email = process.env.WEBSITE_EMAIL;
+const user_pass = process.env.WEBSITE_PASSWORD;
 
 const transporter_info = {
     service: "gmail",
@@ -82,4 +82,4 @@ app.post('/api/contact', (req, res) => {
     res.send(contactInfo);
 })
  
- server.listen(port , () => {})
+ server.listen(port , () => {console.log("Listening on a port")})

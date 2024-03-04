@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class ContactinfoService {
- // url = "https://calm-crag-34365-bfa2266ba68d.herokuapp.com/api/contact"
-  url = "localhost:3000"
+  url = "https://calm-crag-34365-bfa2266ba68d.herokuapp.com/api/contact"
+
   constructor(private http: HttpClient) { }
 
   sendData(data: any) {
