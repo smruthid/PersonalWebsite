@@ -2,22 +2,21 @@ const nodemailer = require("nodemailer");
 const express = require('express');
 const dotenv = require('dotenv').config();
 const http  = require('http');
-const helmet = require('helmet');
-const compression = require('compression');
+const Server  = require("socket.io").Server;
+const cors = require('cors');
 const app = express();
-const path = require('path');
-
+const path = require('path')
 const port = process.env.PORT;
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname  , "./frontend");
 
 app.use(express.json())
+app.use(cors())
 app.use(express.static(buildPath))
-app.use(helmet())
-app.use(compression())
 
-const user_email = process.env.WEBSITE_EMAIL || "test";
-const user_pass = process.env.WEBSITE_PASSWORD || "test";
+
+const user_email = process.env.WEBSITE_EMAIL;
+const user_pass = process.env.WEBSITE_PASSWORD;
 
 const transporter_info = {
     service: "gmail",
@@ -37,7 +36,7 @@ const server  = http.createServer(app)
 app.get("/*", function(req, res){
 
     res.sendFile(
-        path.join(__dirname, "frontend/index.html"),
+        path.join(__dirname, "../frontend/dist/frontend/index.html"),
         function (err) {
           if (err) {
             res.status(500).send(err);
@@ -83,4 +82,4 @@ app.post('/api/contact', (req, res) => {
     res.send(contactInfo);
 })
  
- server.listen(port , () => {})
+ server.listen(port , () => {console.log("Listening on a port")})
